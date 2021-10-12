@@ -4,32 +4,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     </head>
-    <body style="color:red;">
-
-        <div style="color:blue">
-            <div id="divg">
-                Hello
-            </div>
-
-            <div id="mydiv" style="color:black">
-            </div>
+    	<body style="color:red;background-color:grey;">
+    	<div id="mydiv" style="color:black; text-align: center">
         </div>
+	  
+	<body style="height:300px;width:400px;overflow:hidden;text-align: center;">    
+		<center><img id="myimg" src="/static/newgirl.gif" style="text-align: center">
+		<img id="myimg1" src="/static/demonslayer.gif">
+		<img id="myimg2" src="/static/bakeoff.gif"> 	
+	</body>	
 
-        <h2>this text</h2>
-    
-        <img  id="myimg" src="/static/bully.gif" style="width:150px;display:none">
-
-        <script> 
-            var count = 1;
+	<script>
+	var count = 1;
             setInterval( function(){ 
-                    $('#mydiv').html( '<h1>count = ' + count + '</h1>');
-                    count = count + 1;
-
-                    if(count == 5){
-                         $('#myimg').show(1000);
-                    }
-
-                }, 1000);
+                   $('#mydiv').html( '<h1>Current Favorite TV Shows: </h0>');
+		   $('#myimg').show(1000);
+		   $('#myimg1').show(1000);
+		   $('myimg2').show(1000);
+		}
+                );
         </script>
 
     </body>
