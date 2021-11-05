@@ -22,7 +22,7 @@ IMGS_URL = {
 CUR_ENV = "PRD"
 JWT_SECRET = None
 
-global_db_con = get_db()
+#global_db_con = get_db()
 
 
 with open("secret", "r") as f:
@@ -90,13 +90,20 @@ def exposejwt():
     return json_response(output=jwt.decode(jwt_token, JWT_SECRET, algorithms=["HS256"]))
 
 
+''' 
 @app.route('/hellodb') #endpoint
 def hellodb():
     cur = global_db_con.cursor()
     cur.execute("insert into music values( 'dsjfkjdkf', 1);")
     global_db_con.commit()
     return json_response(status="good")
+'''
 
+#assignment 3 
+@app.route('/random', methods=['GET', 'POST']) #endpoint
+def checkForm():
+    print("hello world")
+    return render_template('random.html')
 
 app.run(host='0.0.0.0', port=80)
 
