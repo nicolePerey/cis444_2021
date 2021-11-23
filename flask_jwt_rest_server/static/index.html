@@ -26,8 +26,8 @@
 		}
 
 		function get_books(){
-			 //make secure call with the jwt
-			secure_get_with_token("/secure_api/get_books", {} , function(data){
+				 //make secure call with the jwt
+				 secure_get_with_token("/secure_api/get_books", {} , function(data){
 					console.log("got books"); 
 					console.log(data); 
 					$('#buybook').show();
